@@ -885,7 +885,8 @@ large Desktop
 @media (min-width: 1440px) {
 .introduction,
 .status-bar,
-.process {
+.process,
+.logistics-service {
     width: 1100px;
   }
 }
