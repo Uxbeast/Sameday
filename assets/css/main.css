@@ -126,6 +126,18 @@ body p {
 /************************
 Mobile ************************/
 
+/* End Common Styling */
+
+.primary-header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  /* position: relative; */
+  width: 100%;
+  padding: 0 15px;
+}
+
 /* Common Styling */
 .primary-btn {
   align-self: center;
@@ -137,16 +149,11 @@ Mobile ************************/
   display: flex;
   align-items: center;
 }
-/* End Common Styling */
 
-.primary-header {
-  display: flex;
-  justify-content: space-between;
-  height: 70px;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  padding: 0 15px;
+/* Phone Icon */
+.primary-btn span img {
+  width: 13px;
+  margin-right: 8px;
 }
 
 /* Logo */
@@ -351,12 +358,6 @@ Mobile ************************/
   font-weight: 700;
 }
 
-/* Phone Icon */
-.primary-btn span img {
-  width: 13px;
-  margin-right: 8px;
-}
-
 /* Process */
 .process {
   padding: 30px 15px 0px;
@@ -403,10 +404,28 @@ Mobile ************************/
 }
 
 /* Form */
-.form-section {
-  padding: 30px 15px 0px;
+.form-section-grey-bg {
+  background: #F6F6F6;
 }
 
+.form-section {
+  padding: 30px 15px 60px;
+  /* background: #F6F6F6; */
+  margin-top: 40px;
+}
+
+.form-section .list {
+  padding: 0 20px 10px;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.list ul li {
+  padding: 10px 0;
+}
 
 .form-container {
   background: #3995E8;
@@ -421,12 +440,22 @@ Mobile ************************/
   border-radius: 5px;
   margin-top: 8px;
   margin-bottom: 25px;
+  padding: 0 10px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
 }
 
 .fields label {
   color: #fff;
   font-size: 18px;
   margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background: #6AC661;
+  color: #fff;
+  height: 40px;
+  margin: 0;
 }
 
 /************************
@@ -524,10 +553,9 @@ Large Mobile ************************/
     margin-bottom: 20px;
   }
 
-/* Phone Icon */
-.primary-btn span img {
-    width: 13px;
-    margin-right: 8px;
+  /* From Section */
+  .form-section .list {
+    padding: 0 20px 20px;
   }
   
 }
@@ -550,12 +578,10 @@ Tablet
   
   /* Logo */
   .logo {
-    /* margin: 22px auto 22px 0;  */
     max-height: 35px;
   }
   
   .logo img {
-    /* max-width: 150px; */
     max-height: 35px;
   }
   /* End Logo */
@@ -657,6 +683,26 @@ Tablet
     margin: 20px 0 64px;;
   }
 
+  /* Form Section */
+  .form-section {
+    padding: 60px 20px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .form-section .list,
+  .form-section .form-container {
+    width: 50%;
+  }
+
+  .form-section .list {
+    padding: 0;
+    text-align: left;
+    margin-right: 40px;
+    font-size: 20px;
+  }
+
 }
 
 
@@ -696,6 +742,7 @@ Desktop
   .introduction {
     width: 900px;
     margin: 0 auto;
+    padding: 64px 20px 0;
   }
 
   .introduction h1 {
@@ -734,7 +781,7 @@ Desktop
 
   /* Why Section */
   .why-container {
-    padding-top: 50px;
+    padding-top: 70px;
     width: 900px;
     margin: 0 auto;
   }
@@ -749,7 +796,7 @@ Desktop
     width: 900px;
     margin: 0 auto;
     flex-wrap: nowrap;
-    padding: 50px 20px 36px;
+    padding: 70px 20px 56px;
   }
 
   .status p {
@@ -757,7 +804,7 @@ Desktop
   }
 
   .call-cta {
-    padding: 60px 20px;
+    padding: 70px 20px;
     margin-top: 0px;
   }
   
@@ -778,9 +825,43 @@ Desktop
   .process {
     width: 900px;
     margin: 0 auto;
-    padding: 60px 25px;
+    padding: 80px 25px;
   }
 
+
+  /* Form Section */
+  .form-section {
+    padding: 80px 20px;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .form-section .list,
+  .form-section .form-container {
+    width: 50%;
+  }
+
+  .form-section .list {
+    padding: 0;
+    text-align: left;
+    margin-right: 40px;
+    font-size: 20px;
+  }
+
+  .fields input {
+    height: 50px;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    /* padding-left: 10px; */
+  }
+
+  .form-container {
+    padding: 50px 30px;
+  }
+
+  input[type="submit"] {
+    margin: 0;
+  } 
 }
 
 
