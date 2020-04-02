@@ -304,7 +304,7 @@ Mobile
 .why-text p {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Status Bar */
@@ -546,7 +546,7 @@ Large Mobile ************************/
   /* Call CTA */
   .call-cta {
     padding: 60px 20%;
-    /* margin-top: 20px; */
+    margin-top: 20px;
   }
 
   .call-cta h1 {
@@ -662,6 +662,10 @@ Tablet
   /* Status */
   .status-bar {
     padding: 40px 20px 0;
+  }
+
+  .call-cta {
+    margin-top: 0;
   }
 
   /* Process */
@@ -816,7 +820,6 @@ Desktop
 
   .call-cta {
     padding: 70px 20px;
-    margin-top: 0px;
   }
   
   .call-cta h1 {
@@ -931,6 +934,7 @@ Landing Page 2
 }
 
 .service p {
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   margin-top: 5px;
@@ -1014,6 +1018,10 @@ Tablet
     padding: 25px 20px 0px; 
   }
 
+  .industry {
+    margin: 0 0 50px;
+  }
+
 }
 
 
@@ -1059,7 +1067,6 @@ Desktop
   }
   
   .service p {
-    font-size: 18px;
     margin-top: 10px;
     line-height: 1.6;
   }
@@ -1068,7 +1075,16 @@ Desktop
   .industries {
     width: 900px;
     margin: 0 auto;
-    padding: 4px 20px 0px;
+    padding: 4px 20px 4px;
+  }
+
+  .industry {
+    margin: 0 0 60px;
+  }
+
+  .industry h2 {
+    padding: 15px 20% 0;
+    line-height: 1.5;
   }
   
 }
