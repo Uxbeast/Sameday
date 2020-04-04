@@ -1,7 +1,6 @@
-/*Sola Normalize*/
+/*UXBeast Normalize*/
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -44,7 +43,7 @@ ol {
     list-style: none;
 }
 
-/*Sola Utility Classes*/
+/*UXBeast Utility Classes*/
 
 a.cover-link {
   top: 0;
@@ -85,9 +84,14 @@ a.cover-link {
 
 img.background-image {
 	/*The parent of the <img> needs to have the .background-image-wrapper class as well as a height set (can be set by padding, min-height, or height, depending upon specific case*/
-	transform: scale(1);
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
   transition: transform 1.5s;
-  object-fit: cover;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -103,6 +107,11 @@ img.background-image {
 }
 
 /* Must Style */
+
+*::-moz-selection /*Can adjust values as needed. This changes highlighte text. */ {
+	background-color: #222222; /*Change to Primary Color*/
+	color: #ffffff; /*Change if necessary*/
+}
 
 *::selection /*Can adjust values as needed. This changes highlighte text. */ {
 	background-color: #222222; /*Change to Primary Color*/
@@ -130,10 +139,13 @@ Mobile
 /* End Common Styling */
 
 .primary-header {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   height: 70px;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   /* position: relative; */
   width: 100%;
   padding: 0 15px;
@@ -147,8 +159,10 @@ Mobile
   padding: 8px 18px;
   border-radius: 5px;
   color: #fff;
+  display: -webkit-box;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 /* Phone Icon */
@@ -170,8 +184,10 @@ Mobile
 
 .banner {
   height: 380px;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .banner .color-overlay {
@@ -179,9 +195,13 @@ Mobile
 }
 
 .banner-text {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   padding: 15px;
   color: #fff;
 }
@@ -236,8 +256,10 @@ Mobile
 }
 
 .intro-icons .icon {
+  display: -webkit-box;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   padding-bottom: 25px;
 }
 
@@ -253,7 +275,8 @@ Mobile
 
 .intro-icons .icon img {
   width: 30px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* Why Section */
@@ -285,7 +308,8 @@ Mobile
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .why-img .color-overlay {
@@ -313,9 +337,13 @@ Mobile
 }
 
 .status {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
   padding-bottom: 20px;
 }
 
@@ -342,9 +370,11 @@ Mobile
 .call-cta {
   background: #3995E8;
   padding: 50px 10%;
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 
@@ -370,16 +400,24 @@ Mobile
   height: 55px;
   border-radius: 50%;
   border: 5px solid #3995E8;
+  display: -webkit-box;
   display: flex;
-  justify-content:center;
-  align-items: center;
+  -webkit-box-pack:center;
+          justify-content:center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .step {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .circle h2 {
@@ -393,9 +431,12 @@ Mobile
 }
 
 .process .arrow-icon {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
   margin: 40px 0;
   /* transform: rotate(90deg); */
   opacity: 0.5;
@@ -507,7 +548,9 @@ Large Mobile ************************/
   }
 
   .intro-icons .icon {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     width: 50%;
     padding: 0px 10px 40px;
   }
@@ -535,6 +578,7 @@ Large Mobile ************************/
   /* Status Bar */
   .status-bar {
     padding: 30px 20px 0;
+    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
   }
@@ -637,8 +681,10 @@ Tablet
   .why-content-flex-1,
   .why-content-flex-2,
   .why-content-flex-3 {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .why-content-flex-1 .why-text,
@@ -651,12 +697,14 @@ Tablet
   .why-content-flex-3  */
   .why-content-flex-1 .why-text,
   .why-content-flex-3 .why-text {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+            order: 0;
   }
 
   .why-content-flex-1 .why-img,
   .why-content-flex-3 .why-img {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
   }
 
   /* Status */
@@ -671,8 +719,10 @@ Tablet
   /* Process */
   .process {
     padding: 50px 15px 50px;
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
   }
 
   .process .circle {
@@ -682,7 +732,8 @@ Tablet
   }
 
   .process .step {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
     width: 200px;
   }
 
@@ -699,8 +750,10 @@ Tablet
   .form-section {
     padding: 60px 20px;
     margin-top: 0;
+    display: -webkit-box;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
   }
 
   .form-section .list,
@@ -768,6 +821,7 @@ Desktop
   }
 
   .intro-icons {
+    display: -webkit-box;
     display: flex;
     padding-top: 0;
   }
@@ -948,9 +1002,13 @@ Landing Page 2
 }
 
 .industry {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
   margin: 0 0 30px;
   padding: 0 10px;
 }
@@ -963,7 +1021,8 @@ Landing Page 2
 .industry img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .industry h2 {
@@ -980,6 +1039,7 @@ Large Mobile
 ************************/
 @media (min-width: 480px) {
   .industry-container .row {
+    display: -webkit-box;
     display: flex;
   }
 
@@ -997,6 +1057,7 @@ Tablet
   }
 
   .services-container .row {
+    display: -webkit-box;
     display: flex;
   }
 
